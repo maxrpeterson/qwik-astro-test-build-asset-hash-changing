@@ -1,6 +1,6 @@
 import { component$, useSignal } from "@builder.io/qwik";
 
-import styles from "./componentA.module.scss";
+import styles from "./componentA.module.css";
 
 export const ComponentA = component$(() => {
   const count = useSignal(0);

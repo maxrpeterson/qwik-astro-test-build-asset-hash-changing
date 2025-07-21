@@ -1,8 +1,8 @@
 import { component$, useSignal } from "@builder.io/qwik";
 
-import styles from "./counter.module.scss";
+import styles from "./componentA.module.scss";
 
-export const Counter = component$(() => {
+export const ComponentA = component$(() => {
   const count = useSignal(0);
 
   return (
@@ -13,7 +13,7 @@ export const Counter = component$(() => {
           type="button"
           onClick$={() => count.value++}
         >
-          count is {count.value}
+          Component A count is {count.value}
         </button>
       </div>
     </>

@@ -19,10 +19,10 @@
     "start": "astro dev --open"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@builder.io/qwik": "^1.14.1",
     "@qwikdev/astro": "^0.8",
-    "astro": "^5.8.0",
-    "@astrojs/check": "^0.9.4"
+    "astro": "^5.8.0"
   },
   "private": true,
   "devDependencies": {
@@ -33,6 +33,7 @@
     "eslint-plugin-astro": "^0.34.0",
     "eslint-plugin-qwik": "^1.5.2",
     "prettier": "^3.2.5",
-    "prettier-plugin-astro": "^0.13.0"
+    "prettier-plugin-astro": "^0.13.0",
+    "sass-embedded": "^1.89.2"
   }
 }

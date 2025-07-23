@@ -7,12 +7,8 @@ export const ComponentA = component$(() => {
 
   return (
     <>
-      <div class={styles.container}>
-        <button
-          class={styles.counter}
-          type="button"
-          onClick$={() => count.value++}
-        >
+      <div class={styles.componentA}>
+        <button type="button" onClick$={() => count.value++}>
           Component A count is {count.value}
         </button>
       </div>

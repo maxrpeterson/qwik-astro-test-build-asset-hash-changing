@@ -7,12 +7,8 @@ export const ComponentB = component$(() => {
   const count = useSignal(0);
 
   return (
-    <div class={styles.container}>
-      <button
-        class={styles.counter}
-        type="button"
-        onClick$={() => count.value++}
-      >
+    <div class={styles.componentB}>
+      <button type="button" onClick$={() => count.value++}>
         Component B count is {count.value}
       </button>
       <ComponentA />

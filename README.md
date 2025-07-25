@@ -65,3 +65,7 @@ Removing the `import` of the styles (e.g. `import styles from './componentA.modu
 In the real app where we first noticed this, when inspecting one of the generated modules with changes between builds, it appears that ordering of non-CSS imports is the cause of the variability in at least one case. That is, one module is being imported out of order with another in a generated file, causing the change in the file and by extension the content hash.
 
 Also worth noting, in the real app where we first noticed this issue (not just a minimal reproduction app), we are using SCSS for style files, but as demonstratred here in this minimal reproduction app, the problem is reproducible with vanilla CSS as well. Neither changing to use `lightningcss` as the CSS transformer, nor using the `sass-embedded` library (instead of regular `sass` library) had any effect on the issue, in both our real app and this minimal reproduction app.
+
+## Other things already tried
+
+There was [this issue](https://github.com/vitejs/vite/issues/13672) in Vite where some users said they were seeing similar issues and were able to fix it using the `build.rollupOptions.maxParallelFileOps` vite config property. I tried this as well, however was still seeing variability in the content hashes after running the build.
